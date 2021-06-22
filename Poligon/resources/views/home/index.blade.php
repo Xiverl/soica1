@@ -41,11 +41,6 @@
                   <a href="/topics.show?id={{ $topic->id }}" class="list-group-item" style="padding:10px 1px">
                     <div class="col-md-10 col-xs-9">
                       {{ $topic->title }} <br>
-                      @if (count($topic->ratings))
-                        @for ($i = 0; $i < $topic->averageRating ; $i++)
-                          <i class="glyphicon glyphicon-star" style="color:#f6e729;"></i>
-                        @endfor
-                      @endif
                     </div>
                     <p style="font-size:12px;margin-top:2px;" class="">
                       <span class="fa fa-comments"></span> : {{ count($topic->comments) }} Ответы <br>

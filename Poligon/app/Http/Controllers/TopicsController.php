@@ -63,12 +63,14 @@ class TopicsController extends Controller
      */
     public function show($id=1)
     {
-        if(isset($_GET['id']))
+        if(isset($_GET['id']) && !empty($_GET['id']))
             $id = $_GET['id'];
-        $topic = Topic::findOrFail($_GET['id']);
+        
+		$topic = Topic::findOrFail($id);
         $topic->views += 1;
         $topic->save();
-        $comments = Comment::where('commentable_id', '=', $_GET['id'])->get();
+		
+        $comments = Comment::where('commentable_id', '=', $id)->get();
         return view('topics.show', compact('topic', 'comments'));
     }
 

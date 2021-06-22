@@ -20,7 +20,7 @@
                 @if (!request('page') == 1 or request('page') == 1)
                     <div class="panel panel-default change-panel">
                         <div class="panel-heading">
-                            <img src="http://i.kaskus.id/e3.1/images/banner-kasads-new.png" alt="" style="width:90px;height:70px;" class="pull-left img-rounded">
+                            <img src="http://ivan.new.russianitgroup.ru/images/new.jpg" alt="" style="width:90px;height:70px;" class="pull-left img-rounded">
                             <div class="topic-panel">
 
                                 @if(Auth::check() && Auth::user()->id == $topic->user->id)
@@ -44,7 +44,7 @@
                 @foreach ($comments as $comment)
                     <div class="panel panel-default change-panel">
                         <div class="panel-heading" style="padding-bottom:15px;">
-                            <img src="http://i.kaskus.id/e3.1/images/banner-kasads-new.png"  style="width:90px;height:70px;" class="pull-left img-rounded">
+                            <img src="http://ivan.new.russianitgroup.ru/images/new.jpg"  style="width:90px;height:70px;" class="pull-left img-rounded">
                             <div class="topic-panel">
                                 @if(Auth::check() && Auth::user()->id == $comment->user_id)
                                     <a href="/topics.comments.edit?id={{ $comment->id }}" class="btn btn-default pull-right" style="padding:3px 10px;">Редактирование комментария</a>
